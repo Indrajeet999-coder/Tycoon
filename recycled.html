@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recycled Clothes - FabricFlow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1>FabricFlow - Recycled Clothes</h1>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="cart.html">Cart</a>
+      <button class="toggle-button" onclick="toggleDarkMode()">Dark Mode</button>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- Product Grid for Recycled Clothes -->
+    <div class="product-grid">
+      <!-- Example Product 1 -->
+      <div class="product-card">
+        <img src="recycled1.jpg" alt="Recycled Shirt" class="product-image">
+        <h3 class="product-name">Recycled Shirt</h3>
+        <p class="product-price">$15</p>
+        <button class="add-to-cart" onclick="addToCart('Recycled Shirt', 15)">Add to Cart</button>
+      </div>
+      <!-- Example Product 2 -->
+      <div class="product-card">
+        <img src="recycled2.jpg" alt="Recycled Pants" class="product-image">
+        <h3 class="product-name">Recycled Pants</h3>
+        <p class="product-price">$20</p>
+        <button class="add-to-cart" onclick="addToCart('Recycled Pants', 20)">Add to Cart</button>
+      </div>
+      <!-- More products here -->
+    </div>
+
+    <!-- Tender Information Section -->
+    <section class="tender-info">
+      <h2>Tender for Local Retailers</h2>
+      <p>We are inviting tenders from local retailers to market and distribute our recycled clothing in rural areas. Our goal is to make affordable, high-quality recycled garments accessible to all, especially in under-served regions. As a local retailer, you will have the opportunity to become a distributor of these sustainable fashion items in your area.</p>
+      <p>By partnering with us, you can offer these eco-friendly products to your community while also benefiting from a growing market for sustainable goods. If you are interested in becoming a distributor and taking responsibility for marketing these products, please reach out to us using the contact form.</p>
+      <h3>Why Partner with FabricFlow?</h3>
+      <ul>
+        <li>Affordable and high-quality recycled clothing.</li>
+        <li>Potential to expand your business by tapping into the growing demand for sustainable products.</li>
+        <li>Exclusive partnership with a trusted supplier.</li>
+      </ul>
+    </section>
+
+    <!-- Delivery Partners Information -->
+    <section class="delivery-info">
+      <h2>Our Delivery Partners</h2>
+      <p>We understand that rural areas can sometimes present logistical challenges when it comes to delivering goods directly to customers. To overcome this, we have partnered with reliable delivery service providers who will ensure that all goods are delivered to the local retailers, not directly to individual consumers.</p>
+      <p>Our delivery partners are experienced in handling bulk shipments to rural areas, ensuring that the products reach you on time, safely, and in excellent condition. Once the goods arrive at your retail location, you can take care of the distribution within your local community.</p>
+      <h3>Benefits of Working with Our Delivery Partners:</h3>
+      <ul>
+        <li>Efficient transportation of bulk orders to rural locations.</li>
+        <li>Reliable and timely deliveries to ensure stock is available for customers.</li>
+        <li>Affordable shipping costs that reduce the financial burden on retailers.</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2024 FabricFlow. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Dark Mode Toggle
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    // Check saved theme on page load
+    window.onload = function() {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+      } else {
+        document.body.classList.remove('dark-mode');
+      }
+    };
+
+    // Cart logic using localStorage
+    function addToCart(productName, price) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push({ productName, price });
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert(`${productName} added to cart.`);
+    }
+  </script>
+
+</body>
+</html>
