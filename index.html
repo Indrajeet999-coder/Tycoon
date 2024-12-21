@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FabricFlow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <header class="header">
+    <h1>FabricFlow</h1>
+    <nav class="nav">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  
+  <div class="container">
+    
+    <aside class="sidebar">
+      <h2>Sidebar</h2>
+      <ul>
+        <li><a href="https://facebook.com/yourpage" target="_blank">
+            <img src="https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-0.png" alt="Facebook" class="social-icon" height="40px" width="40px">
+        </a><a href="https://twitter.com/yourprofile" target="_blank">
+            <img src="https://logos-world.net/wp-content/uploads/2020/04/Twitter-Symbol.png" alt="Twitter" class="social-icon" height="35px" width="60px">
+        </a></li>
+        <li> <a href="https://instagram.com/yourprofile" target="_blank">
+            <img src="https://static.vecteezy.com/system/resources/previews/023/986/555/original/instagram-logo-instagram-logo-transparent-instagram-icon-transparent-free-free-png.png" alt="Instagram" class="social-icon" height="40px" width="40px">
+        </a></li>
+        <li> <a href="https://linkedin.com/in/yourprofile" target="_blank">
+            <img src="https://static.vecteezy.com/system/resources/previews/021/460/490/original/linkedin-logo-free-download-free-png.png" alt="LinkedIn" class="social-icon" height="50px" width="50px">
+        </a></li>
+        
+      </ul>
+    </aside>
+
+    
+    <main class="main-content">
+    
+    <div class="region-selector">
+        <h3>Select Your Region:</h3>
+        <label class="region-option">
+            <input type="radio" name="region" value="urban">
+            <span>Urban</span>
+        </label>
+        <label class="region-option">
+            <input type="radio" name="region" value="rural">
+            <span>Rural</span>
+        </label>
+        <button type="submit" class="submit-button">Submit</button>
+    </div>
+    <script>
+        function redirectToPage() {
+            
+            const selectedRegion = document.querySelector('input[name="region"]:checked');
+            
+            if (selectedRegion) {
+                
+                const regionValue = selectedRegion.value;
+                if (regionValue === "urban") {
+                    window.location.href = "urban.html"; 
+                } else if (regionValue === "rural") {
+                    window.location.href = "rural.html"; 
+                }
+            } else {
+                
+                alert("Please select a region before submitting.");
+            }
+        }
+        </script>
+        
+    
+    </main>
+
+    
+    <section class="extra">
+      <h2>Additional Section</h2>
+      <p>This is an optional section you can use to add extra content or features.</p>
+    </section>
+  </div>
+
+  
+  <footer class="footer">
+    <p>&copy; 2024 FabricFlow. All rights reserved.</p>
+  </footer>
+</body>
+</html>
