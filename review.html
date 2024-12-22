@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FabricFlow - Review Your Purchase</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .main-content {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .main-content h2 {
+      font-size: 1.8rem;
+      color: #2c3e50;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    input[type="text"],
+    select,
+    textarea {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    input[type="text"]:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #3498db;
+      outline: none;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    button {
+      padding: 12px;
+      background-color: #3498db;
+      color: white;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    footer {
+      background-color: #222;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    .footer {
+      font-size: 0.8rem;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .main-content {
+        margin: 20px;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav a {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <h1>FabricFlow - Product Review</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <h2>Thank You for Your Purchase! Please Share Your Feedback</h2>
+
+    <form id="review-form" action="submit_review.php" method="POST">
+      <label for="product-name">Product Name:</label>
+      <input type="text" id="product-name" name="product-name" required placeholder="Enter the product name">
+
+      <label for="rating">Rating (1 to 5):</label>
+      <select id="rating" name="rating" required>
+        <option value="1">1 - Poor</option>
+        <option value="2">2 - Fair</option>
+        <option value="3">3 - Good</option>
+        <option value="4">4 - Very Good</option>
+        <option value="5">5 - Excellent</option>
+      </select>
+
+      <label for="review-text">Your Review:</label>
+      <textarea id="review-text" name="review-text" rows="5" required placeholder="Write your review here"></textarea>
+
+      <button type="submit">Submit Review</button>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 FabricFlow. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -21,7 +21,7 @@
   <div class="container">
     
     <aside class="sidebar">
-      <h2>Sidebar</h2>
+      <h2>Connect with Us</h2>
       <ul>
         <li><a href="https://facebook.com/yourpage" target="_blank">
             <img src="https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-0.png" alt="Facebook" class="social-icon" height="40px" width="40px">
@@ -55,9 +55,9 @@
       <button class="toggle-button" onclick="toggleDarkMode()">Dark Mode</button>
     </main>
 
-    <section class="extra">
-      <h2>Additional Section</h2>
-      <p>This is an optional section you can use to add extra content or features.</p>
+    <section class="extra" style="background-color: beige;">
+      <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">.</h2>
+      <p>"Fashion is not just about clothes, it's about a story, a lifestyle, and a vision. In business, we don't just sell products; we create experiences that empower and inspire."</p>
     </section>
   </div>
 
@@ -66,7 +66,6 @@
   </footer>
 
   <script>
-    
     function toggleDarkMode() {
         document.body.classList.toggle('dark-mode');
         
@@ -77,7 +76,6 @@
         }
     }
 
-    
     window.onload = function() {
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'dark') {
@@ -87,7 +85,6 @@
         }
     };
 
-    
     function redirectToPage() {
         const selectedType = document.querySelector('input[name="type"]:checked'); 
         
@@ -103,5 +100,6 @@
         }
     }
   </script>
+
 </body>
 </html>
